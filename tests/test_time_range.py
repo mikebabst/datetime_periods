@@ -3,6 +3,7 @@ from unittest import TestCase
 
 from datetime_periods import TimeRange
 from dateutil.tz import tzutc
+import pytz
 
 
 class TimeRangeTest(TestCase):
@@ -14,7 +15,10 @@ class TimeRangeTest(TestCase):
     def combine(self, time, add_day=False, tzinfo=None):
         timestamp = datetime.combine(self.date, time)
         if tzinfo:
-            timestamp = timestamp.replace(tzinfo=tzinfo)
+            try:
+                timestamp = tzinfo.localize(timestamp)
+            except AttributeError:
+                timestamp = timestamp.replace(tzinfo=tzinfo)
 
         if add_day:
             return timestamp + timedelta(days=1)
@@ -66,6 +70,17 @@ class TimeRangeTest(TestCase):
         # It should just set the timezone, not convert between timezones
         self.assertEqual(tr.start.time(), self.start)
         self.assertEqual(tr.stop.time(), self.stop)
+
+    def test_should_tzinfo_localize_when_available(self):
+        # localize takes care of different times for different dates,
+        # for instance Singapore's first timezone is GMT+6:55 but
+        # currently in 2013 it's GMT+08:00.
+        sg_tz = pytz.timezone('Asia/Singapore')
+        self.date = datetime(2013, 12, 24)
+        tr = TimeRange(self.start, self.stop, date=self.date, tzinfo=sg_tz)
+
+        self.assertEqual(tr.start, self.combine(self.start, tzinfo=sg_tz))
+        self.assertEqual(tr.stop, self.combine(self.stop, tzinfo=sg_tz))
 
     def test_class_should_be_accessible_as_list(self):
         # Where 0=start, 1=stop

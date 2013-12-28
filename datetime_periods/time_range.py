@@ -65,7 +65,12 @@ class TimeRange(object):
 
         if self.tzinfo:
             for k, v in self.timestamp.items():
-                self.timestamp[k] = v.replace(tzinfo=self.tzinfo)
+                try:
+                    v = self.tzinfo.localize(v)
+                except AttributeError:
+                    v = v.replace(tzinfo=self.tzinfo)
+
+                self.timestamp[k] = v
 
     def _ensure_date(self, date):
         if not date:

@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='datetime_periods',
-    version='1.1.0',
+    version='1.1.1',
     url='https://github.com/gaqzi/datetime_periods',
     author='Björn Andersson',
     author_email='ba@sanitarium.se',
@@ -20,7 +20,10 @@ setup(
         'datetime_truncate>=1.0.0',
     ],
     test_suite='nose.collector',
-    tests_require=['nose>=1.2.1'],
+    tests_require=[
+        'nose>=1.2.1',
+        'pytz'
+    ],
     classifiers=[
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
