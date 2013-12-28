@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# datetime_truncate documentation build configuration file, created by
+# datetime_periods documentation build configuration file, created by
 # sphinx-quickstart on Mon Apr  1 10:02:37 2013.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'datetime_periods'
-copyright = u'2013, Björn Andersson / Media Pop'
+copyright = u'2013, Björn Andersson'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -167,7 +167,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'datetime_truncatedoc'
+htmlhelp_basename = 'datetime_periodsdoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -186,8 +186,8 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'datetime_truncate.tex', u'datetime\\_truncate Documentation',
-   u'Björn Andersson / Media Pop', 'manual'),
+  ('index', 'datetime_periods.tex', u'datetime\\_truncate Documentation',
+   u'Björn Andersson', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -216,8 +216,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'datetime_truncate', u'datetime_truncate Documentation',
-     [u'Björn Andersson / Media Pop'], 1)
+    ('index', 'datetime_periods', u'datetime_periods Documentation',
+     [u'Björn Andersson'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -230,8 +230,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'datetime_truncate', u'datetime_truncate Documentation',
-   u'Björn Andersson / Media Pop', 'datetime_truncate', 'One line description of project.',
+  ('index', 'datetime_periods', u'datetime_periods Documentation',
+   u'Björn Andersson', 'datetime_periods', 'One line description of project.',
    'Miscellaneous'),
 ]
 

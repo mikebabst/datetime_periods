@@ -3,10 +3,9 @@ datetime_periods
 ================
 
 .. image:: https://travis-ci.org/mediapop/datetime_periods.png
-           :target: https://travis-ci.org/mediapop/datetime_periods
+           :target: https://travis-ci.org/gaqzi/datetime_periods
 
-This module aims to help you create time periods as easily as if by a
-snap of your finger.
+This module aims to help you create time periods from timestamps.
 
 Pass in a `datetime.datetime()` object and a period name and it'll
 return the beginning and end of that period.
@@ -16,7 +15,7 @@ Documentation available on `Read the Docs`_.
 Installation:
 -------------
 
-You can install from pypi!
+You can install from PyPi!
 
 .. code-block::
 

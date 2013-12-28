@@ -3,8 +3,7 @@ datetime_periods
 ================
 
 
-This module aims to help you create time periods as easily as if by a
-snap of your finger.
+This module aims to help you create time periods from timestamps.
 
 `period` usage:
 ------
