@@ -2,7 +2,7 @@
 datetime_periods
 ================
 
-.. image:: https://travis-ci.org/mediapop/datetime_periods.png
+.. image:: https://travis-ci.org/gaqzi/datetime_periods.png
            :target: https://travis-ci.org/gaqzi/datetime_periods
 
 This module aims to help you create time periods from timestamps.
